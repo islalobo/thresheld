@@ -57,8 +57,8 @@
     methods: {
       toggleAudio() {
         const audio = this.$refs.audio;
-        console.log(audio);
-        if (audio.pause) {
+        console.log(audio.paused);
+        if (audio.paused) {
           audio.play();
           this.isPlaying = true;
         } else {
