@@ -1,6 +1,6 @@
 <template>
   <video
-    :src="`https://${bucket}.s3.amazonaws.com/public/main.mov`"
+    :src="`https://${bucket}.s3.amazonaws.com/public/final.mov`"
     type="video/mov"
     controls
   />
