@@ -1,10 +1,14 @@
 <template>
   <video
-    src="https://css-tricks-post-videos.s3.us-east-1.amazonaws.com/blurry-trees.mov"
+    src="https://<BUCKETEER_BUCKET_NAME>.s3.amazonaws.com/public/main.mov"
     type="video/mov"
     controls
   />
 </template>
+
+<script>
+console.log(process.env.BUCKETEER_BUCKET_NAME);
+</script>
 
 <script>
 export default {
