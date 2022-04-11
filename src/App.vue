@@ -1,6 +1,6 @@
 <template>
   <div class="app-header">
-    <div class="logo">
+    <div class="logo" @click="goHome">
       thresheld
     </div>
 
@@ -16,6 +16,12 @@
 
   <router-view />
 </template>
+
+<script>
+const goHome = async () => {
+  console.log('click');
+}
+</script>
 
 <style>
   body {
