@@ -11,7 +11,7 @@
         loop
       >
         <source
-          src="https://<VUE_APP_BUCKETEER_BUCKET_NAME>.s3.amazonaws.com/public/body.wav"
+          :src="`https://${bucket}.s3.amazonaws.com/public/body.wav`"
           type="audio/mpeg"
         />
         Your browser does not support the audio element.
@@ -52,6 +52,7 @@
       return {
         input_name: 'audio',
         value_model: 500,
+        bucket: process.env.VUE_APP_BUCKETEER_BUCKET_NAME,
       }
     },
     methods: {
@@ -59,6 +60,9 @@
         // const audio = this.$refs.audio;
         const audio = document.getElementById("body-audio");
         console.log(audio.paused);
+
+        console.log(process.env.VUE_APP_BUCKETEER_BUCKET_NAME);
+
         if (audio.paused) {
           console.log('gets here');
           audio.play();
