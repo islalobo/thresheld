@@ -1,7 +1,7 @@
 <template>
   <div class="explore">
     <div class="play" @click="toggleAudio">
-      <div :text="text">{text}</div>
+      <div :text="text">{{ text }}</div>
     </div>
 
     <div class="audio-item">
@@ -61,10 +61,6 @@
     methods: {
       toggleAudio() {
         const audio = this.$refs.audio;
-        // const audio = document.getElementById("body-audio");
-        console.log(audio.paused);
-
-        console.log(process.env.VUE_APP_BUCKETEER_BUCKET_NAME);
 
         if (audio.paused) {
           console.log('gets here');
