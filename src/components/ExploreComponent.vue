@@ -11,7 +11,7 @@
         loop
       >
         <source
-          src="https://islalobo.github.io/thresheld-old/audio/audio_1.mp3"
+          src="https://<VUE_APP_BUCKETEER_BUCKET_NAME>.s3.amazonaws.com/public/body.wav"
           type="audio/mpeg"
         />
         Your browser does not support the audio element.

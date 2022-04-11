@@ -17,12 +17,6 @@
   <router-view />
 </template>
 
-<script>
-const goHome = async () => {
-  console.log('click');
-}
-</script>
-
 <style>
   body {
     margin: 0px;
