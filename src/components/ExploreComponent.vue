@@ -24,9 +24,8 @@
         max="1000"
         min="0"
         type="range"
-        :value="input_value"
-        v-model="value_model"
-        @change="updateVolume()"
+        v-model="value"
+        @change="updateVolume"
       />
 
       <div>
@@ -52,7 +51,7 @@
     data() {
       return {
         input_name: 'audio',
-        input_value: 500,
+        value: 500,
         bucket: process.env.VUE_APP_BUCKETEER_BUCKET_NAME,
       }
     },
