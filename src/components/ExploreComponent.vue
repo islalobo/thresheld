@@ -24,6 +24,7 @@
         max="1000"
         min="0"
         type="range"
+        :value="input_value"
         v-model="value_model"
         @change="updateVolume()"
       />
@@ -51,14 +52,14 @@
     data() {
       return {
         input_name: 'audio',
-        value_model: 500,
+        input_value: 500,
         bucket: process.env.VUE_APP_BUCKETEER_BUCKET_NAME,
       }
     },
     methods: {
       toggleAudio() {
-        // const audio = this.$refs.audio;
-        const audio = document.getElementById("body-audio");
+        const audio = this.$refs.audio;
+        // const audio = document.getElementById("body-audio");
         console.log(audio.paused);
 
         console.log(process.env.VUE_APP_BUCKETEER_BUCKET_NAME);
@@ -66,17 +67,15 @@
         if (audio.paused) {
           console.log('gets here');
           audio.play();
-          // this.isPlaying = true;
         } else {
           console.log('audio paused')
           audio.pause();
-          // this.isPlaying = false;
         }
       },
       updateVolume() {
-        console.log('update volume', this.value.model);
+        console.log('update volume', this.value.value);
         const audio = this.$refs.audio;
-        audio.volume = this.value_model / 1000;
+        audio.volume = this.value / 1000;
       }
     },
     mounted() {
