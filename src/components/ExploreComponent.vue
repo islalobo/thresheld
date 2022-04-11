@@ -1,7 +1,7 @@
 <template>
   <div class="explore">
     <div class="play" @click="toggleAudio">
-      <div :text="text"></div>
+      <div :text="text">{text}</div>
     </div>
 
     <div class="audio-item">
