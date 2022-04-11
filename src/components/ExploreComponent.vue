@@ -73,7 +73,7 @@
         }
       },
       updateVolume() {
-        console.log('update volume', this.value.value);
+        console.log('update volume', this.value);
         const audio = this.$refs.audio;
         audio.volume = this.value / 1000;
       }
