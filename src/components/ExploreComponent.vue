@@ -8,7 +8,7 @@
       <audio
         id="body-audio"
         preload="metadata"
-        ref="audio"
+        ref="body-audio"
         style="width:300px;"
         loop
       >
@@ -49,7 +49,7 @@
       <audio
         id="drone-audio"
         preload="metadata"
-        ref="audio"
+        ref="drone-audio"
         style="width:300px;"
         loop
       >
@@ -90,7 +90,7 @@
       <audio
         id="field-audio"
         preload="metadata"
-        ref="audio"
+        ref="field-audio"
         style="width:300px;"
         loop
       >
@@ -131,7 +131,7 @@
       <audio
         id="vox-audio"
         preload="metadata"
-        ref="audio"
+        ref="vox-audio"
         style="width:300px;"
         loop
       >
@@ -188,6 +188,7 @@
     methods: {
       toggleAudio() {
         const audio = this.$refs.audio;
+        console.log(audio.id);
         if (audio.paused) {
           audio.play();
           this.text = 'pause';
