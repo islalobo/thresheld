@@ -1,5 +1,11 @@
 <template>
-  <video src="https://css-tricks-post-videos.s3.us-east-1.amazonaws.com/blurry-trees.mov" autoplay loop playsinline muted></video>
+  <video
+    :src="`https://${bucket}.s3.amazonaws.com/public/swirlclip.mov`"
+    autoplay 
+    loop
+    playsinline muted
+  >
+  </video>
   
   <div class="hello">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
