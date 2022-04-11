@@ -20,8 +20,7 @@
       </audio>
 
       <input
-        id="body-volume"
-        :name="input_name"
+        id="body"
         class="volume-toggle"
         max="1000"
         min="0"
@@ -61,8 +60,7 @@
       </audio>
 
       <input
-        id="body-volume"
-        :name="input_name"
+        :id="drone"
         class="volume-toggle"
         max="1000"
         min="0"
@@ -102,8 +100,7 @@
       </audio>
 
       <input
-        id="body-volume"
-        :name="input_name"
+        :id="field"
         class="volume-toggle"
         max="1000"
         min="0"
@@ -143,8 +140,7 @@
       </audio>
 
       <input
-        id="body-volume"
-        :name="input_name"
+        :id="vox"
         class="volume-toggle"
         max="1000"
         min="0"
@@ -175,20 +171,28 @@
     name: 'ExploreComponent',
     data() {
       return {
-        text: 'play all tracks',
-        input_name: 'audio',
-        value: 500,
+        // bucket name
         bucket: process.env.VUE_APP_BUCKETEER_BUCKET_NAME,
+        // init play state text
+        text: 'play all tracks',
+        // track titles
         audio_title_1: 'Body',
         audio_title_2: 'Drone',
         audio_title_3: 'Field',
         audio_title_4: 'Vox',
+        // input ids
+        body: 'body-volume',
+        drone: 'drone-volume',
+        field: 'field-volume',
+        vox: 'vox-volume',
+        // input init value
+        value: 500,
       }
     },
     methods: {
       toggleAudio() {
         const audio = this.$refs.audio;
-        console.log(audio.id);
+        console.log(audio);
         if (audio.paused) {
           audio.play();
           this.text = 'pause';
