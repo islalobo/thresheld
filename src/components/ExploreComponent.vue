@@ -32,8 +32,8 @@
 
       <div>
         <details close>
-          <summary>
-            Title
+          <summary :title="title">
+            {{ title }}
           </summary>
           <div>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -56,6 +56,7 @@
         value: 500,
         text: 'play all tracks',
         bucket: process.env.VUE_APP_BUCKETEER_BUCKET_NAME,
+        title: 'Body',
       }
     },
     methods: {

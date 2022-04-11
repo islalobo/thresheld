@@ -11,7 +11,12 @@ export default {
   name: 'WatchComponent',
   props: {
     msg: String
-  }
+  },
+  data() {
+    return {
+      bucket: process.env.VUE_APP_BUCKETEER_BUCKET_NAME,
+    }
+  },
 }
 </script>
 
