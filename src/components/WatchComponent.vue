@@ -8,9 +8,7 @@
 
 <script>
 console.log(process.env.BUCKETEER_BUCKET_NAME);
-</script>
 
-<script>
 export default {
   name: 'WatchComponent',
   props: {
