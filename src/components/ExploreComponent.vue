@@ -1,6 +1,8 @@
 <template>
   <div class="explore">
-    <div class="play" @click="toggleAudio">Play</div>
+    <div class="play" @click="toggleAudio">
+      <div v-text="text"></div>
+    </div>
 
     <div class="audio-item">
       <audio
@@ -53,6 +55,24 @@
         input_name: 'audio',
         value: 500,
         bucket: process.env.VUE_APP_BUCKETEER_BUCKET_NAME,
+      }
+    },
+    computed: {
+        text: function () {
+        let text;
+
+        const audio = this.$refs.audio;
+        if (audio.paused) {
+          console.log('gets here');
+          audio.play();
+          text = 'pause';
+        } else {
+          console.log('audio paused')
+          audio.pause();
+          text = 'play';
+        }
+
+        return text;
       }
     },
     methods: {
