@@ -59,11 +59,13 @@
         const audio = this.$refs.audio;
         console.log(audio.paused);
         if (audio.paused) {
+          console.log('gets here');
           audio.play();
-          this.isPlaying = true;
+          // this.isPlaying = true;
         } else {
+          console.log('audio paused')
           audio.pause();
-          this.isPlaying = false;
+          // this.isPlaying = false;
         }
       },
       updateVolume() {
