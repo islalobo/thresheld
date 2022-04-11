@@ -54,7 +54,7 @@
       return {
         input_name: 'audio',
         value: 500,
-        text: 'play',
+        text: 'play all tracks',
         bucket: process.env.VUE_APP_BUCKETEER_BUCKET_NAME,
       }
     },
@@ -63,23 +63,17 @@
         const audio = this.$refs.audio;
 
         if (audio.paused) {
-          console.log('gets here');
           audio.play();
-          this.text = 'play';
-        } else {
-          console.log('audio paused')
-          audio.pause();
           this.text = 'pause';
+        } else {
+          audio.pause();
+          this.text = 'play all tracks';
         }
       },
       updateVolume() {
-        console.log('update volume', this.value);
         const audio = this.$refs.audio;
         audio.volume = this.value / 1000;
       }
-    },
-    mounted() {
-      // do something when the app mounts
     }
   }
 </script>

@@ -1,14 +1,12 @@
 <template>
   <video
-    src="https://<VUE_APP_BUCKETEER_BUCKET_NAME>.s3.amazonaws.com/public/main.mov"
+    :src="`https://${bucket}.s3.amazonaws.com/public/main.mov`"
     type="video/mov"
     controls
   />
 </template>
 
 <script>
-console.log(process.env.VUE_APP_BUCKETEER_BUCKET_NAME);
-
 export default {
   name: 'WatchComponent',
   props: {
