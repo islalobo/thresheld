@@ -56,7 +56,8 @@
     },
     methods: {
       toggleAudio() {
-        const audio = this.$refs.audio;
+        // const audio = this.$refs.audio;
+        const audio = document.getElementById("body-audio");
         console.log(audio.paused);
         if (audio.paused) {
           console.log('gets here');
@@ -69,6 +70,7 @@
         }
       },
       updateVolume() {
+        console.log('update volume', this.value.model);
         const audio = this.$refs.audio;
         audio.volume = this.value_model / 1000;
       }
