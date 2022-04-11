@@ -38,6 +38,12 @@
 <script>
 export default {
   name: 'InfoComponent',
+  data() {
+    return {
+      // bucket name
+      bucket: process.env.VUE_APP_BUCKETEER_BUCKET_NAME,
+    }
+  },
   props: {
     msg: String
   }
