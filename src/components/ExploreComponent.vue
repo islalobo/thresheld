@@ -44,6 +44,129 @@
         </details>
       </div> 
     </div>
+
+    <div class="audio-item">
+      <audio
+        id="body-audio"
+        preload="metadata"
+        ref="audio"
+        style="width:300px;"
+        loop
+      >
+        <source
+          :src="`https://${bucket}.s3.amazonaws.com/public/body.wav`"
+          type="audio/mpeg"
+        />
+        Your browser does not support the audio element.
+      </audio>
+
+      <input
+        id="body-volume"
+        :name="input_name"
+        class="volume-toggle"
+        max="1000"
+        min="0"
+        type="range"
+        v-model="value"
+        @change="updateVolume"
+      />
+
+      <div>
+        <details close>
+          <summary :title="title">
+            {{ title }}
+          </summary>
+          <div>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna
+            aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+            ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </div>
+        </details>
+      </div> 
+    </div>
+
+    <div class="audio-item">
+      <audio
+        id="body-audio"
+        preload="metadata"
+        ref="audio"
+        style="width:300px;"
+        loop
+      >
+        <source
+          :src="`https://${bucket}.s3.amazonaws.com/public/body.wav`"
+          type="audio/mpeg"
+        />
+        Your browser does not support the audio element.
+      </audio>
+
+      <input
+        id="body-volume"
+        :name="input_name"
+        class="volume-toggle"
+        max="1000"
+        min="0"
+        type="range"
+        v-model="value"
+        @change="updateVolume"
+      />
+
+      <div>
+        <details close>
+          <summary :title="title">
+            {{ title }}
+          </summary>
+          <div>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna
+            aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+            ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </div>
+        </details>
+      </div> 
+    </div>
+
+    <div class="audio-item">
+      <audio
+        id="body-audio"
+        preload="metadata"
+        ref="audio"
+        style="width:300px;"
+        loop
+      >
+        <source
+          :src="`https://${bucket}.s3.amazonaws.com/public/body.wav`"
+          type="audio/mpeg"
+        />
+        Your browser does not support the audio element.
+      </audio>
+
+      <input
+        id="body-volume"
+        :name="input_name"
+        class="volume-toggle"
+        max="1000"
+        min="0"
+        type="range"
+        v-model="value"
+        @change="updateVolume"
+      />
+
+      <div>
+        <details close>
+          <summary :title="audio_title_4">
+            {{ audio_title_4 }}
+          </summary>
+          <div>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+            sed do eiusmod tempor incididunt ut labore et dolore magna
+            aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+            ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </div>
+        </details>
+      </div> 
+    </div>
   </div>
 </template>
 
@@ -57,6 +180,7 @@
         text: 'play all tracks',
         bucket: process.env.VUE_APP_BUCKETEER_BUCKET_NAME,
         title: 'Body',
+        audio_title_4: 'Field',
       }
     },
     methods: {
@@ -122,11 +246,12 @@
 
   .volume-toggle {
     width: 100%;
-    height: 50px;
+    height: 40px;
     -webkit-appearance: none;
     background: #F9F1F0;
     outline: none;
     overflow: hidden;
+    border-radius: 25px;
   }
 
   .volume-toggle::-webkit-slider-thumb {
