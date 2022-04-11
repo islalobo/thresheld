@@ -1,14 +1,12 @@
 <template>
   <video
-    src="https://<BUCKETEER_BUCKET_NAME>.s3.amazonaws.com/public/main.mov"
+    src="https://bucketeer-65e5a636-429d-49f8-ac47-fb62455857a6.s3.amazonaws.com/public/main.mov"
     type="video/mov"
     controls
   />
 </template>
 
 <script>
-console.log(process.env.BUCKETEER_BUCKET_NAME);
-
 export default {
   name: 'WatchComponent',
   props: {
