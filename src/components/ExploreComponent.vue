@@ -1,6 +1,6 @@
 <template>
   <div class="explore">
-    <div class="play" @click="toggleAudio()">Play</div>
+    <div class="play" @click="toggleAudio">Play</div>
 
     <div class="audio-item">
       <audio
@@ -57,8 +57,8 @@
     methods: {
       toggleAudio() {
         const audio = this.$refs.audio;
-
-        if (audio.paused) {
+        console.log(audio);
+        if (audio.pause) {
           audio.play();
           this.isPlaying = true;
         } else {
