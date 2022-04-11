@@ -47,7 +47,7 @@
 
     <div class="audio-item">
       <audio
-        id="body-audio"
+        id="drone-audio"
         preload="metadata"
         ref="audio"
         style="width:300px;"
@@ -88,7 +88,7 @@
 
     <div class="audio-item">
       <audio
-        id="body-audio"
+        id="field-audio"
         preload="metadata"
         ref="audio"
         style="width:300px;"
@@ -129,7 +129,7 @@
 
     <div class="audio-item">
       <audio
-        id="body-audio"
+        id="vox-audio"
         preload="metadata"
         ref="audio"
         style="width:300px;"
@@ -188,7 +188,6 @@
     methods: {
       toggleAudio() {
         const audio = this.$refs.audio;
-
         if (audio.paused) {
           audio.play();
           this.text = 'pause';
@@ -199,6 +198,7 @@
       },
       updateVolume() {
         const audio = this.$refs.audio;
+        console.log(audio);
         audio.volume = this.value / 1000;
       }
     }
