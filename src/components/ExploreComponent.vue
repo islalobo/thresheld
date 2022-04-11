@@ -33,7 +33,7 @@
       <div>
         <details close>
           <summary :title="title">
-            {{ title }}
+            {{ audio_title_1 }}
           </summary>
           <div>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -54,7 +54,7 @@
         loop
       >
         <source
-          :src="`https://${bucket}.s3.amazonaws.com/public/body.wav`"
+          :src="`https://${bucket}.s3.amazonaws.com/public/drone.wav`"
           type="audio/mpeg"
         />
         Your browser does not support the audio element.
@@ -74,7 +74,7 @@
       <div>
         <details close>
           <summary :title="title">
-            {{ title }}
+            {{ audio_title_2 }}
           </summary>
           <div>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -95,7 +95,7 @@
         loop
       >
         <source
-          :src="`https://${bucket}.s3.amazonaws.com/public/body.wav`"
+          :src="`https://${bucket}.s3.amazonaws.com/public/field.wav`"
           type="audio/mpeg"
         />
         Your browser does not support the audio element.
@@ -115,7 +115,7 @@
       <div>
         <details close>
           <summary :title="title">
-            {{ title }}
+            {{ audio_title_3 }}
           </summary>
           <div>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit,
@@ -136,7 +136,7 @@
         loop
       >
         <source
-          :src="`https://${bucket}.s3.amazonaws.com/public/body.wav`"
+          :src="`https://${bucket}.s3.amazonaws.com/public/vox.wav`"
           type="audio/mpeg"
         />
         Your browser does not support the audio element.
@@ -175,12 +175,14 @@
     name: 'ExploreComponent',
     data() {
       return {
+        text: 'play all tracks',
         input_name: 'audio',
         value: 500,
-        text: 'play all tracks',
         bucket: process.env.VUE_APP_BUCKETEER_BUCKET_NAME,
-        title: 'Body',
-        audio_title_4: 'Field',
+        audio_title_1: 'Body',
+        audio_title_2: 'Drone',
+        audio_title_3: 'Field',
+        audio_title_4: 'Vox',
       }
     },
     methods: {
