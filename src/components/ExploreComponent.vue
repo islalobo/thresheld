@@ -32,13 +32,10 @@
       <div>
         <details close>
           <summary :title="title">
-            {{ audio_title_1 }}
+            {{ audio_1.title }}
           </summary>
           <div>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-            sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-            ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            {{ audio_1.description }}
           </div>
         </details>
       </div> 
@@ -72,13 +69,10 @@
       <div>
         <details close>
           <summary :title="title">
-            {{ audio_title_2 }}
+            {{ audio_2.title }}
           </summary>
           <div>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-            sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-            ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            {{ audio_2.description }}
           </div>
         </details>
       </div> 
@@ -112,13 +106,10 @@
       <div>
         <details close>
           <summary :title="title">
-            {{ audio_title_3 }}
+            {{ audio_3.title }}
           </summary>
           <div>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-            sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-            ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            {{ audio_3.description }}
           </div>
         </details>
       </div> 
@@ -151,14 +142,11 @@
 
       <div>
         <details close>
-          <summary :title="audio_title_4">
-            {{ audio_title_4 }}
+          <summary :title="title">
+            {{ audio_4.title }}
           </summary>
           <div>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-            sed do eiusmod tempor incididunt ut labore et dolore magna
-            aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-            ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            {{ audio_4.description }}
           </div>
         </details>
       </div> 
@@ -174,17 +162,32 @@
         // bucket name
         bucket: process.env.VUE_APP_BUCKETEER_BUCKET_NAME,
         // init play state text
-        text: 'play all tracks',
+        controls: {
+          play: 'play all tracks',
+          pause: 'pause all tracks',
+        },
         // track titles
-        audio_title_1: 'Body',
-        audio_title_2: 'Drone',
-        audio_title_3: 'Field',
-        audio_title_4: 'Vox',
+        audio_1: {
+          title: 'Body',
+          description: 'seaweed on rocks / corporal rhythm / forms in motion / gesturing into belonging / seal sounds / heartbeat and breath / “Before she goes underwater, the harbour seal will slow her heart.  Yes.  From 120 beats per minute to three or four heartbeats. Per minute. But first she exhales.  When she is underwater, the oxygen she needs is the oxygen she has.  Her blood breathes for her through her muscles as she descends as deep as 1,500 feet.  Deep enough for what she needs to do.  She slows her heart and listens, reaches, knows.  What if you could hear the world between your heartbeats? Slow down enough to deepen into trust?” from Undrowned: Black Feminist Lessons from Marine Mammals by Alexis Pauline Gumbs. (p.142)',
+        },
+        audio_2: {
+          title: 'Thrum',
+          description: 'mercurial / throbbing / analog bass pedals / N violin drone / electric guitar / ocean noise / water traffic / presence in fluidity / shapeshifting',
+        },
+        audio_3 : {
+          title: 'Field',
+          description: 'sounds of transitional seasons / queer times & spaces / fall sleet on dried knotweed / intertidal zones / underwater recordings from seal sites / pulse and shift of tide / movement / liminal / cyclical',
+        },
+        audio_4: {
+          title:  'Song',
+          description: 'voice offerings / adaptations of N’s songs for the seals & selkies / devotional / odes to lineage / queer & trans ancestors / gay seals / echos / relationships through time / familial / care / reverberant offerings / reciprocity / settling in uncertainty / thresholding',
+        },
         // input ids
         body: 'body-volume',
-        drone: 'drone-volume',
+        thrum: 'thrum-volume',
         field: 'field-volume',
-        vox: 'vox-volume',
+        song: 'song-volume',
         // input init value
         value: 500,
       }
