@@ -1,7 +1,7 @@
 <template>
   <video
     :src="`https://${bucket}.s3.amazonaws.com/public/final.mov`"
-    type="video/mov"
+    type='video/mp4'
     controls
   />
 </template>
