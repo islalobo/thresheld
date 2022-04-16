@@ -1,9 +1,12 @@
 <template>
   <video
-    :src="`https://${bucket}.s3.amazonaws.com/public/final.mov`"
+    :src="`https://${bucket}.s3.amazonaws.com/public/final.mp4`"
     type='video/mp4'
     controls
   />
+  <video id="sampleMovie" width="640" height="360" preload controls>
+    <source src="`https://${bucket}.s3.amazonaws.com/public/final.mp4`" />
+  </video>
 </template>
 
 <script>
