@@ -1,11 +1,10 @@
 <template>
-  <video
-    :src="`https://${bucket}.s3.amazonaws.com/public/final.mp4`"
-    type='video/mp4'
-    controls
-  />
   <video id="sampleMovie" width="640" height="360" preload controls>
+    <source :src="`https://${bucket}.s3.amazonaws.com/public/final.m4v`" />
     <source :src="`https://${bucket}.s3.amazonaws.com/public/final.mp4`" />
+    <source :src="`https://${bucket}.s3.amazonaws.com/public/final.ogv`" />
+    <source :src="`https://${bucket}.s3.amazonaws.com/public/final.wemb`" />
+    Your browser does not support the video tag.
   </video>
 </template>
 
