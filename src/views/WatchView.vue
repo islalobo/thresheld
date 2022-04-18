@@ -1,5 +1,5 @@
 <template>
-  <div class="watch">
+  <div class="watch content">
     <WatchComponent/>
   </div>
 </template>

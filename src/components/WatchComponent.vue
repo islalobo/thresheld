@@ -26,10 +26,11 @@ export default {
 <style scoped>
   video {
     object-fit: cover;
-    width: 100vw;
-    height: calc(100vh - 90px);
-    position: fixed ;
-    bottom: 0;
-    left: 0;
+    /* width: 100vw; */
+    /* height: calc(100vh - 190px); */
+    /* position: fixed ; */
+    /* bottom: 0; */
+    /* left: 0; */
+    width: 100%;
   }
 </style>

@@ -1,5 +1,5 @@
 <template>
-  <div class="explore">
+  <div class="explore content">
     <ExploreComponent/>
   </div>
 </template>

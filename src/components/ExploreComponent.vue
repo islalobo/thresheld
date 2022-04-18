@@ -1,7 +1,7 @@
 <template>
   <div class="explore">
     <div class="play" @click="toggleAudio">
-      <div :text="text">{{ text }}</div>
+      <div :text="text" class="controls">{{ controls.play }}</div>
     </div>
 
     <div class="audio-item">
@@ -20,16 +20,15 @@
       </audio>
 
       <input
-        id="body"
+        :id="body"
         class="volume-toggle"
         max="1000"
         min="0"
         type="range"
-        v-model="value"
         @change="updateVolume"
       />
 
-      <div>
+      <!-- <div> -->
         <details close>
           <summary :title="title">
             {{ audio_1.title }}
@@ -38,7 +37,7 @@
             {{ audio_1.description }}
           </div>
         </details>
-      </div> 
+      <!-- </div>  -->
     </div>
 
     <div class="audio-item">
@@ -62,11 +61,10 @@
         max="1000"
         min="0"
         type="range"
-        v-model="value"
         @change="updateVolume"
       />
 
-      <div>
+      <!-- <div> -->
         <details close>
           <summary :title="title">
             {{ audio_2.title }}
@@ -75,7 +73,7 @@
             {{ audio_2.description }}
           </div>
         </details>
-      </div> 
+      <!-- </div>  -->
     </div>
 
     <div class="audio-item">
@@ -99,11 +97,10 @@
         max="1000"
         min="0"
         type="range"
-        v-model="value"
         @change="updateVolume"
       />
 
-      <div>
+      <!-- <div> -->
         <details close>
           <summary :title="title">
             {{ audio_3.title }}
@@ -112,7 +109,7 @@
             {{ audio_3.description }}
           </div>
         </details>
-      </div> 
+      <!-- </div>  -->
     </div>
 
     <div class="audio-item">
@@ -131,16 +128,15 @@
       </audio>
 
       <input
-        :id="vox"
+        id="vox"
         class="volume-toggle"
         max="1000"
         min="0"
         type="range"
-        v-model="value"
         @change="updateVolume"
       />
 
-      <div>
+      <!-- <div> -->
         <details close>
           <summary :title="title">
             {{ audio_4.title }}
@@ -149,7 +145,7 @@
             {{ audio_4.description }}
           </div>
         </details>
-      </div> 
+      <!-- </div>  -->
     </div>
   </div>
 </template>
@@ -194,6 +190,8 @@
     },
     methods: {
       toggleAudio() {
+        // audio.play() or audio.pause()
+        // text ...controls.text
         const audio = this.$refs.audio;
         console.log(audio);
         if (audio.paused) {
@@ -204,8 +202,11 @@
           this.text = 'play all tracks';
         }
       },
-      updateVolume() {
-        const audio = this.$refs.audio;
+      updateVolume(event) {
+        console.log(event.target.value);
+        console.log(event.target.id);
+
+        const audio = document.getElementById(`${event.target.id}-audio`);
         console.log(audio);
         audio.volume = this.value / 1000;
       }
@@ -215,10 +216,27 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+  .controls:hover {
+    cursor: pointer;
+  }
+
   .explore {
     text-align: justify;
-    margin: auto 400px;
-    padding-top: 20px;
+    margin: auto 50px;
+  }
+
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  @media only screen and (min-width: 600px) {
+    .explore {
+      margin: auto 150px;
+    }
+  }
+
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+  @media only screen and (min-width: 1200px) {
+    .explore {
+      margin: auto 250px;
+    }
   }
 
   .audio {
