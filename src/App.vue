@@ -73,9 +73,9 @@
     margin: auto 20px;
   }
 
-  .watch.content {
+  /* .watch.content {
     height: 100vh;
-  }
+  } */
 
   .paragraph {
     text-align: justify;
