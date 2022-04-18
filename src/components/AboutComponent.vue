@@ -3,6 +3,7 @@
     <img
       :src="`https://${bucket}.s3.amazonaws.com/public/still.jpeg`"
       alt="Image of the artist and their child"
+      class="about-image"
     />
   </div>
 
@@ -47,3 +48,10 @@ export default {
   }
 }
 </script>
+
+<!-- Add "scoped" attribute to limit CSS to this component only -->
+<style scoped>
+  .about-image {
+    width: 100%;
+  }
+</style>
