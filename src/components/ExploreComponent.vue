@@ -220,11 +220,6 @@
     cursor: pointer;
   }
 
-  .explore {
-    text-align: justify;
-    margin: auto 50px;
-  }
-
   /* Small devices (portrait tablets and large phones, 600px and up) */
   @media only screen and (min-width: 600px) {
     .explore {
