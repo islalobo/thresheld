@@ -1,6 +1,6 @@
 <template>
   <div class="app-header">
-    <div class="logo" @click="goHome">
+    <div class="main-title" @click="goHome">
       thresheld
     </div>
 
@@ -29,6 +29,10 @@
     color: black;
     background-color: #F3C5C5;
     padding-bottom: 80px;
+    font-size: 16px;
+    font-weight: 400;
+    background: url('../public/background.gif');
+    background-size: cover;
   }
 
   .app-header {
@@ -43,9 +47,10 @@
     flex: 1;
     text-align: end;
     position: relative;
+    font-size: .875em;
   }
 
-  .logo {
+  .main-title {
     flex: 1;
     text-align: start;
     font-size: 72px;
@@ -54,7 +59,7 @@
 
   /* Small devices (portrait tablets and large phones, 600px and up) */
   @media only screen and (min-width: 600px) {
-    .logo {
+    .main-title {
       font-size: 115px;
     }
   }
@@ -62,20 +67,18 @@
   nav a {
     font-weight: bold;
     color: black;
+    text-decoration: none;
   }
 
   nav a.router-link-exact-active {
     color: #42b983;
+    text-decoration: none;
   }
 
   .content {
     height: 100%;
     margin: auto 20px;
   }
-
-  /* .watch.content {
-    height: 100vh;
-  } */
 
   .paragraph {
     text-align: justify;

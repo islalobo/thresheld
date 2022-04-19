@@ -1,7 +1,7 @@
 <template>
   <div class="explore">
     <div class="play" @click="toggleAudio">
-      <div :text="text" class="controls">{{ controls.play }}</div>
+      <div :text="text" class="controls">{{ text }}</div>
     </div>
 
     <div class="audio-item">
@@ -31,10 +31,10 @@
       <!-- <div> -->
         <details close>
           <summary :title="title">
-            {{ audio_1.title }}
+            {{ audio[1].title }}
           </summary>
           <div>
-            {{ audio_1.description }}
+            {{ audio[1].description }}
           </div>
         </details>
       <!-- </div>  -->
@@ -42,9 +42,9 @@
 
     <div class="audio-item">
       <audio
-        id="drone-audio"
+        id="thrum-audio"
         preload="metadata"
-        ref="drone-audio"
+        ref="thrum-audio"
         style="width:300px;"
         loop
       >
@@ -56,7 +56,7 @@
       </audio>
 
       <input
-        :id="drone"
+        :id="thrum"
         class="volume-toggle"
         max="1000"
         min="0"
@@ -67,10 +67,10 @@
       <!-- <div> -->
         <details close>
           <summary :title="title">
-            {{ audio_2.title }}
+            {{ audio[2].title }}
           </summary>
           <div>
-            {{ audio_2.description }}
+            {{ audio[2].description }}
           </div>
         </details>
       <!-- </div>  -->
@@ -103,10 +103,10 @@
       <!-- <div> -->
         <details close>
           <summary :title="title">
-            {{ audio_3.title }}
+            {{ audio[3].title }}
           </summary>
           <div>
-            {{ audio_3.description }}
+            {{ audio[3].description }}
           </div>
         </details>
       <!-- </div>  -->
@@ -114,9 +114,9 @@
 
     <div class="audio-item">
       <audio
-        id="vox-audio"
+        id="song-audio"
         preload="metadata"
-        ref="vox-audio"
+        ref="song-audio"
         style="width:300px;"
         loop
       >
@@ -128,7 +128,7 @@
       </audio>
 
       <input
-        id="vox"
+        :id="song"
         class="volume-toggle"
         max="1000"
         min="0"
@@ -139,10 +139,10 @@
       <!-- <div> -->
         <details close>
           <summary :title="title">
-            {{ audio_4.title }}
+            {{ audio[4].title }}
           </summary>
           <div>
-            {{ audio_4.description }}
+            {{ audio[4].description }}
           </div>
         </details>
       <!-- </div>  -->
@@ -158,26 +158,33 @@
         // bucket name
         bucket: process.env.VUE_APP_BUCKETEER_BUCKET_NAME,
         // init play state text
+        text: 'play all tracks',
         controls: {
           play: 'play all tracks',
           pause: 'pause all tracks',
         },
-        // track titles
-        audio_1: {
-          title: 'Body',
-          description: 'seaweed on rocks / corporal rhythm / forms in motion / gesturing into belonging / seal sounds / heartbeat and breath / “Before she goes underwater, the harbour seal will slow her heart.  Yes.  From 120 beats per minute to three or four heartbeats. Per minute. But first she exhales.  When she is underwater, the oxygen she needs is the oxygen she has.  Her blood breathes for her through her muscles as she descends as deep as 1,500 feet.  Deep enough for what she needs to do.  She slows her heart and listens, reaches, knows.  What if you could hear the world between your heartbeats? Slow down enough to deepen into trust?” from Undrowned: Black Feminist Lessons from Marine Mammals by Alexis Pauline Gumbs. (p.142)',
-        },
-        audio_2: {
-          title: 'Thrum',
-          description: 'mercurial / throbbing / analog bass pedals / N violin drone / electric guitar / ocean noise / water traffic / presence in fluidity / shapeshifting',
-        },
-        audio_3 : {
-          title: 'Field',
-          description: 'sounds of transitional seasons / queer times & spaces / fall sleet on dried knotweed / intertidal zones / underwater recordings from seal sites / pulse and shift of tide / movement / liminal / cyclical',
-        },
-        audio_4: {
-          title:  'Song',
-          description: 'voice offerings / adaptations of N’s songs for the seals & selkies / devotional / odes to lineage / queer & trans ancestors / gay seals / echos / relationships through time / familial / care / reverberant offerings / reciprocity / settling in uncertainty / thresholding',
+        audio: {
+          // track titles
+          1: {
+            id: 'body',
+            title: 'Body',
+            description: 'seaweed on rocks / corporal rhythm / forms in motion / gesturing into belonging / seal sounds / heartbeat and breath / “Before she goes underwater, the harbour seal will slow her heart.  Yes.  From 120 beats per minute to three or four heartbeats. Per minute. But first she exhales.  When she is underwater, the oxygen she needs is the oxygen she has.  Her blood breathes for her through her muscles as she descends as deep as 1,500 feet.  Deep enough for what she needs to do.  She slows her heart and listens, reaches, knows.  What if you could hear the world between your heartbeats? Slow down enough to deepen into trust?” from Undrowned: Black Feminist Lessons from Marine Mammals by Alexis Pauline Gumbs. (p.142)',
+          },
+          2: {
+            id: 'thrum',
+            title: 'Thrum',
+            description: 'mercurial / throbbing / analog bass pedals / N violin drone / electric guitar / ocean noise / water traffic / presence in fluidity / shapeshifting',
+          },
+          3 : {
+            id: 'field',
+            title: 'Field',
+            description: 'sounds of transitional seasons / queer times & spaces / fall sleet on dried knotweed / intertidal zones / underwater recordings from seal sites / pulse and shift of tide / movement / liminal / cyclical',
+          },
+          4: {
+            id: 'song',
+            title:  'Song',
+            description: 'voice offerings / adaptations of N’s songs for the seals & selkies / devotional / odes to lineage / queer & trans ancestors / gay seals / echos / relationships through time / familial / care / reverberant offerings / reciprocity / settling in uncertainty / thresholding',
+          },
         },
         // input ids
         body: 'body-volume',
@@ -190,25 +197,21 @@
     },
     methods: {
       toggleAudio() {
-        // audio.play() or audio.pause()
-        // text ...controls.text
-        const audio = this.$refs.audio;
-        console.log(audio);
-        if (audio.paused) {
-          audio.play();
-          this.text = 'pause';
-        } else {
-          audio.pause();
-          this.text = 'play all tracks';
+        for (let index = 1; index <= Object.keys(this.audio).length; index++) {
+          let audio = document.getElementById(`${this.audio[index].id}-audio`);
+          if (audio.paused) {
+            audio.play();
+            this.text = this.controls.pause;
+          } else if (!audio.paused) {
+            audio.pause();
+            this.text = this.controls.play;
+          }
         }
       },
       updateVolume(event) {
-        console.log(event.target.value);
-        console.log(event.target.id);
-
-        const audio = document.getElementById(`${event.target.id}-audio`);
-        console.log(audio);
-        audio.volume = this.value / 1000;
+        this.value = event.target.value;
+        const id = event.target.id.replace('-volume', '');
+        document.getElementById(`${id}-audio`).volume = this.value / 1000;
       }
     }
   }
@@ -299,8 +302,8 @@
 
   div > details {
     position: relative;
-    left: 2px;
-    top: 20px;
+    left: 16px;
+    top: 16px;
   }
 
   details div {
@@ -329,7 +332,7 @@
   }
 
   summary {
-    border: 2px solid #000;
+    /* border: 2px solid #000; */
     padding: .75em 1em;
     cursor: pointer;
     position: relative;
