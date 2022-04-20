@@ -9,17 +9,22 @@
 </template>
 
 <script>
-export default {
-  name: 'WatchComponent',
-  props: {
-    msg: String
-  },
-  data() {
-    return {
-      bucket: process.env.VUE_APP_BUCKETEER_BUCKET_NAME,
-    }
-  },
-}
+  document.getElementById('app').style.background  = "black";
+  document.getElementById('app').style.backgroundSize  = "cover";
+  document.getElementById('app').style.height = "100vh";
+
+  export default {
+    name: 'WatchComponent',
+    props: {
+      msg: String
+    },
+    data() {
+      return {
+        // bucket name
+        bucket: process.env.VUE_APP_BUCKETEER_BUCKET_NAME,
+      }
+    },
+  }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -31,7 +36,7 @@ export default {
     /* position: fixed ; */
     /* bottom: 0; */
     /* left: 0; */
-    width: 100%;
-    height: 100%;
+    width: 75%;
+    height: 60%;
   }
 </style>

@@ -1,21 +1,87 @@
 <template>
   <div class="app-header">
-    <div class="main-title" @click="goHome">
+    <div
+      class="main-title"
+      @click="goHome"
+    >
       thresheld
     </div>
 
     <div class="nav-area">
       <nav>
-        <router-link to="/">info</router-link> |
-        <router-link to="/watch">watch</router-link> |
-        <router-link to="/explore">explore</router-link> |
-        <router-link to="/about">about</router-link>
+        <router-link
+          to="/"
+          @click="changeBackgroundInfo"
+        >
+          info
+        </router-link> |
+        <router-link
+          to="/watch"
+          @click="changeBackgroundWatch"
+        >
+          watch
+        </router-link> |
+        <router-link
+          :id="explore"
+          to="/explore"
+          @click="changeBackgroundExplore"
+        >
+          explore
+        </router-link> |
+        <router-link
+          to="/about"
+          @click="changeBackgroundAbout"
+        >
+          about
+        </router-link>
       </nav>
     </div>
   </div>
 
   <router-view />
 </template>
+
+<script>
+  export default {
+    methods: {
+      goHome() {
+        window.location = '/';
+      },
+      changeBackgroundInfo() {
+        document.getElementById('app').style.background  = "url('../pinkwater.gif')";
+        document.getElementById('app').style.backgroundSize  = "cover";
+        navigator.userAgentData.mobile
+          ? document.getElementById('app').style.height = "auto"
+          : document.getElementById('app').style.height = "100vh" ;
+        // document.getElementById('app').style.color = "ghostwhite";
+      },
+      changeBackgroundWatch() {
+        document.getElementById('app').style.background  = "black";
+        document.getElementById('app').style.backgroundSize  = "cover";
+        navigator.userAgentData.mobile
+          ? document.getElementById('app').style.height = "auto"
+          : document.getElementById('app').style.height = "100vh" ;
+        // document.getElementById('app').style.color = "ghostwhite";
+      },
+      changeBackgroundExplore() {
+        document.getElementById('app').style.background  = "url('../swirlclip2.gif')";
+        document.getElementById('app').style.backgroundSize  = "cover";
+        navigator.userAgentData.mobile
+          ? document.getElementById('app').style.height = "auto"
+          : document.getElementById('app').style.height = "100vh" ;
+        // document.getElementById('app').style.color = "black";
+      },
+      changeBackgroundAbout() {
+        document.getElementById('app').style.background  = "url('../pinkwater.gif')";
+        document.getElementById('app').style.backgroundSize  = "cover";
+        navigator.userAgentData.mobile
+          ? document.getElementById('app').style.height = "auto"
+          : document.getElementById('app').style.height = "100vh" ;
+        // document.getElementById('app').style.color = "ghostwhite";
+      },
+    }
+  }
+</script>
 
 <style>
   body {
@@ -26,13 +92,11 @@
   #app {
     font-family: "Montserrat", sans-serif;
     text-align: justify;
-    color: black;
-    background-color: #F3C5C5;
-    padding-bottom: 80px;
+    color: ghostwhite;
     font-size: 16px;
     font-weight: 400;
-    background: url('../public/background.gif');
     background-size: cover;
+    padding-bottom: 60px;
   }
 
   .app-header {
@@ -66,18 +130,22 @@
 
   nav a {
     font-weight: bold;
-    color: black;
+    color: ghostwhite;
     text-decoration: none;
   }
 
   nav a.router-link-exact-active {
-    color: #42b983;
+    background: chartreuse;
+    color: black;
     text-decoration: none;
   }
 
   .content {
-    height: 100%;
     margin: auto 20px;
+  }
+
+  .watch.content {
+    text-align: center;
   }
 
   .paragraph {
@@ -87,17 +155,24 @@
     position: relative;
   }
 
-  /* Small devices (portrait tablets and large phones, 600px and up) */
-  @media only screen and (min-width: 600px) {
+  /* Extra small devices (phones, 600px and down) */
+  /* @media only screen and (max-width: 600px) {
     .paragraph {
       margin: auto 150px;
     }
-  }
+  } */
 
   /* Extra large devices (large laptops and desktops, 1200px and up) */
   @media only screen and (min-width: 1200px) {
     .paragraph {
       margin: auto 250px;
     }
+  }
+
+  .chartreuse {
+    color: chartreuse;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
   }
 </style>

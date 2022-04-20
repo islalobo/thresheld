@@ -8,45 +8,47 @@
   </div>
 
   <div class="paragraph">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    This work was created in relationship with the water, the land and creatures of Mi’kma’ki, the traditional,
+    unceded and unsurrendered territory of the Mi’kmaq. We live here in gratitude and endeavor, as treaty people,
+    to continue the work of cultivating respectful relationships with all people as outlined in the Peace and
+    Friendship Treaties.
   </div>
 
   <div class="paragraph">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    <strong>Kit Holden-Ada</strong> is a multidisciplinary settler artist and craftsperson of Scottish/Irish/English
+    ancestry born and raised on the prairies (Treaty 2) and currently based in Kjiputktuk, Mi’kma’ki
+    (Halifax, NS). As a working parent and artist they maintain slow engagement with sound, movement,
+    and installation-based work that centers curious explorations of (queer) relationality, lineage,
+    practice and play. A trained metalsmith, Kit has been producing a line of jewellery
+    (<a href="http://www.fervoursown.com/" target="_blank">Fervour’s Own Jewellery</a>) since 2011. With appreciation
+    for working in close relationship with the body and the elements, Kit approaches
+    craftwork and hand making as embodiment practices. 
   </div>
-  
+
   <div class="paragraph">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    <strong>N Ada</strong> is a curious and creative almost-13-year-old and a seasoned collaborator (big sibling).
+    She is currently into reading, playing violin, baking and exploring her expanding world. 
+    Her melodies brought all the seals to the yard.
   </div>
 </template>
 
 <script>
-export default {
-  name: 'AboutComponent',
-  data() {
-    return {
-      bucket: process.env.VUE_APP_BUCKETEER_BUCKET_NAME,
+  document.getElementById('app').style.background  = "url('../pinkwater.gif')";
+  document.getElementById('app').style.backgroundSize  = "cover";
+  document.getElementById('app').style.height = "auto";
+
+  export default {
+    name: 'AboutComponent',
+    data() {
+      return {
+        // bucket name
+        bucket: process.env.VUE_APP_BUCKETEER_BUCKET_NAME,
+      }
+    },
+    props: {
+      msg: String
     }
-  },
-  props: {
-    msg: String
   }
-}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

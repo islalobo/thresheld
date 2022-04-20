@@ -151,6 +151,11 @@
 </template>
 
 <script>
+  document.getElementById('app').style.background  = "url('../swirlclip2.gif')";
+  document.getElementById('app').style.backgroundSize  = "cover";
+  document.getElementById('app').style.height = "100vh";
+  // document.getElementById('app').style.color = "black";
+
   export default {
     name: 'ExploreComponent',
     data() {
@@ -257,6 +262,15 @@
     }
   }
 
+  .play {
+    background: chartreuse;
+    padding: 6px 0;
+    width: 158px;
+    color: black;
+    border-radius: 100px;
+    text-align: center;
+  }
+
   input.volume-toggle {
     margin-top: 30px;
   }
@@ -284,11 +298,11 @@
     -webkit-appearance: none;
     width: 15px;
     height: 50px;
-    background: #edd4da;
+    background: #BFFFF0;
     cursor: pointer;
-    border-left: 2px solid #edd4da;
+    border-left: 2px solid #BFFFF0;
     border-right: 2px solid #212529;
-    box-shadow: -407px 0 0 400px #edd4da;
+    box-shadow: -407px 0 0 400px #BFFFF0;
   }
 
   .description {
