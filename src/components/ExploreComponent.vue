@@ -161,13 +161,15 @@
 <script>
   const bucket = process.env.VUE_APP_BUCKETEER_BUCKET_NAME;
 
-  document.getElementById('app').style.background  = `url('https://${bucket}.s3.amazonaws.com/public/swirlclip2.gif')`;
+  
   document.getElementById('app').style.backgroundSize  = "cover";
 
   if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator?.userAgent) ) {
-    document.getElementById('app').style.height = "auto"
+    document.getElementById('app').style.background  = `url('https://${bucket}.s3.amazonaws.com/public/dark_waterink_still_1.22.1_scaled.jpg')`;
+    document.getElementById('app').style.backgroundSize  = "cover";
   } else {
-    document.getElementById('app').style.height = "auto"
+    document.getElementById('app').style.background  = `url('https://${bucket}.s3.amazonaws.com/public/swirlclip2.gif')`;
+    document.getElementById('app').style.backgroundSize  = "cover";
   }
 
   export default {
