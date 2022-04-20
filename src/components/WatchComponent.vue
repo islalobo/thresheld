@@ -82,4 +82,8 @@
     width: 100%;
     height: 60%;
   }
+
+  .paragraph {
+    margin-bottom: 32px;
+  }
 </style>

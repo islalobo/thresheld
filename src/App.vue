@@ -199,8 +199,9 @@
   .paragraph,
   .image-container {
     text-align: justify;
-    margin: auto 40;
-    padding-top: 20px;
+    margin-top: 0;
+    margin-right: 40px;
+    margin-left: 40px;
   }
 
   /* Extra small devices (phones, 600px and down) */
@@ -214,7 +215,8 @@
   @media only screen and (min-width: 1200px) {
     .paragraph,
     .image-container {
-      margin: auto 250px;
+      margin-right: 250px;
+      margin-left: 250px;
     }
   }
 

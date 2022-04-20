@@ -93,4 +93,8 @@
     font-size: 0.8em;
     font-style: italic;
   }
+
+  .paragraph {
+    margin-bottom: 32px;
+  }
 </style>

@@ -6,7 +6,7 @@
       </div>
     </div>
 
-    <div class="paragraph">
+    <div class="paragraph chartreuse">
       <div class="chartreuse">
        * Headphones or speakers are reccommended to explore this project *
       </div>
@@ -256,7 +256,7 @@
   /* Extra large devices (large laptops and desktops, 1200px and up) */
   @media only screen and (min-width: 1200px) {
     .explore {
-      margin: auto 250px;
+      margin: auto 275px;
     }
   }
 
@@ -400,5 +400,11 @@
   .chartreuse {
     background: #F3C5C5;
     opacity: 0.678;
+  }
+
+  .paragraph.chartreuse {
+    margin: auto;
+    padding-top: 0px;
+    margin-top: 32px;
   }
 </style>
