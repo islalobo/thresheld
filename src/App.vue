@@ -208,8 +208,8 @@
     }
   }
 
-  /* Small devices (portrait tablets and large phones, 600px and up) */
-  @media only screen and (min-width: 600px) {
+  /* Medium devices (landscape tablets, 768px and up) */
+  @media only screen and (min-width: 768px) {
     .paragraph {
       text-align: justify;
       margin-top: 0;
