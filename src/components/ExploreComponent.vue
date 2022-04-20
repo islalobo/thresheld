@@ -151,7 +151,7 @@
 </template>
 
 <script>
-  document.getElementById('app').style.background  = "url('../swirlclip2.gif')";
+  document.getElementById('app').style.background  = "url('ttps://${bucket}.s3.amazonaws.com/public/swirlclip2.gif')";
   document.getElementById('app').style.backgroundSize  = "cover";
   document.getElementById('app').style.height = "100vh";
   // document.getElementById('app').style.color = "black";

@@ -42,13 +42,15 @@
 </template>
 
 <script>
+  const bucket = process.env.VUE_APP_BUCKETEER_BUCKET_NAME;
+  
   export default {
     methods: {
       goHome() {
         window.location = '/';
       },
       changeBackgroundInfo() {
-        document.getElementById('app').style.background  = "url('../pinkwater.gif')";
+        document.getElementById('app').style.background  = `url('https://${bucket}.s3.amazonaws.com/public/pinkwater.gif')`;
         document.getElementById('app').style.backgroundSize  = "cover";
         // navigator.userAgentData.mobile
         //   ? document.getElementById('app').style.height = "auto"
@@ -64,7 +66,7 @@
         // document.getElementById('app').style.color = "ghostwhite";
       },
       changeBackgroundExplore() {
-        document.getElementById('app').style.background  = "url('../swirlclip2.gif')";
+        document.getElementById('app').style.background  = `url('https://${bucket}.s3.amazonaws.com/public/swirlclip2.gif')`;
         document.getElementById('app').style.backgroundSize  = "cover";
         // navigator.userAgentData.mobile
         //   ? document.getElementById('app').style.height = "auto"
@@ -72,7 +74,7 @@
         // document.getElementById('app').style.color = "black";
       },
       changeBackgroundAbout() {
-        document.getElementById('app').style.background  = "url('../pinkwater.gif')";
+        document.getElementById('app').style.background  = `url('https://${bucket}.s3.amazonaws.com/public/lavenderwater.gif')`;
         document.getElementById('app').style.backgroundSize  = "cover";
         // navigator.userAgentData.mobile
         //   ? document.getElementById('app').style.height = "auto"
