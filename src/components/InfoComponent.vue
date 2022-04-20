@@ -25,7 +25,9 @@
 </template>
 
 <script>
-  document.getElementById('app').style.background  = "url('../pinkwater.gif')";
+  const bucket = process.env.VUE_APP_BUCKETEER_BUCKET_NAME;
+
+  document.getElementById('app').style.background  = `url('https://${bucket}.s3.amazonaws.com/public/pinkwater.gif')`;
   document.getElementById('app').style.backgroundSize  = "cover";
   // navigator.userAgentData.mobile
   //   ? document.getElementById('app').style.height = "auto"
