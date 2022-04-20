@@ -199,24 +199,17 @@
   .paragraph,
   .image-container {
     text-align: justify;
+    margin-top: 0;
+    margin-right: 40px;
+    margin-left: 40px;
   }
 
   /* Extra small devices (phones, 600px and down) */
-  @media only screen and (max-width: 600px) {
+  /* @media only screen and (max-width: 600px) {
     .paragraph {
-      margin: 0px;
+      margin: auto 150px;
     }
-  }
-
-  /* Medium devices (landscape tablets, 768px and up) */
-  @media only screen and (min-width: 768px) {
-    .paragraph {
-      text-align: justify;
-      margin-top: 0;
-      margin-right: 40px;
-      margin-left: 40px;
-    }
-  }
+  } */
 
   /* Extra large devices (large laptops and desktops, 1200px and up) */
   @media only screen and (min-width: 1200px) {
