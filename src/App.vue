@@ -42,6 +42,14 @@
 </template>
 
 <script>
+  global.navigator = {
+    userAgent: 'node',
+  }
+
+  window.navigator = {
+    userAgent: 'node',
+  }
+  
   const bucket = process.env.VUE_APP_BUCKETEER_BUCKET_NAME;
 
   export default {
