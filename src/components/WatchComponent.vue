@@ -11,7 +11,10 @@
 <script>
   document.getElementById('app').style.background  = "black";
   document.getElementById('app').style.backgroundSize  = "cover";
-  document.getElementById('app').style.height = "100vh";
+  window.navigator.userAgentData.mobile
+    ? document.getElementById('app').style.height = "auto"
+    : document.getElementById('app').style.height = "100vh" ;
+  document.getElementById('app').style.color = "ghostwhite";
 
   export default {
     name: 'WatchComponent',

@@ -43,7 +43,7 @@
 
 <script>
   const bucket = process.env.VUE_APP_BUCKETEER_BUCKET_NAME;
-  
+
   export default {
     methods: {
       goHome() {
@@ -52,34 +52,34 @@
       changeBackgroundInfo() {
         document.getElementById('app').style.background  = `url('https://${bucket}.s3.amazonaws.com/public/pinkwater.gif')`;
         document.getElementById('app').style.backgroundSize  = "cover";
-        // navigator.userAgentData.mobile
-        //   ? document.getElementById('app').style.height = "auto"
-        //   : document.getElementById('app').style.height = "100vh" ;
-        // document.getElementById('app').style.color = "ghostwhite";
+        window.navigator.userAgentData.mobile
+          ? document.getElementById('app').style.height = "auto"
+          : document.getElementById('app').style.height = "100vh" ;
+        document.getElementById('app').style.color = "ghostwhite";
       },
       changeBackgroundWatch() {
         document.getElementById('app').style.background  = "black";
         document.getElementById('app').style.backgroundSize  = "cover";
-        // navigator.userAgentData.mobile
-        //   ? document.getElementById('app').style.height = "auto"
-        //   : document.getElementById('app').style.height = "100vh" ;
-        // document.getElementById('app').style.color = "ghostwhite";
+        window.navigator.userAgentData.mobile
+          ? document.getElementById('app').style.height = "auto"
+          : document.getElementById('app').style.height = "100vh" ;
+        document.getElementById('app').style.color = "ghostwhite";
       },
       changeBackgroundExplore() {
         document.getElementById('app').style.background  = `url('https://${bucket}.s3.amazonaws.com/public/swirlclip2.gif')`;
         document.getElementById('app').style.backgroundSize  = "cover";
-        // navigator.userAgentData.mobile
-        //   ? document.getElementById('app').style.height = "auto"
-        //   : document.getElementById('app').style.height = "100vh" ;
-        // document.getElementById('app').style.color = "black";
+        window.navigator.userAgentData.mobile
+          ? document.getElementById('app').style.height = "auto"
+          : document.getElementById('app').style.height = "100vh" ;
+        document.getElementById('app').style.color = "black";
       },
       changeBackgroundAbout() {
         document.getElementById('app').style.background  = `url('https://${bucket}.s3.amazonaws.com/public/lavenderwater.gif')`;
         document.getElementById('app').style.backgroundSize  = "cover";
-        // navigator.userAgentData.mobile
-        //   ? document.getElementById('app').style.height = "auto"
-        //   : document.getElementById('app').style.height = "100vh" ;
-        // document.getElementById('app').style.color = "ghostwhite";
+        window.navigator.userAgentData.mobile
+          ? document.getElementById('app').style.height = "auto"
+          : document.getElementById('app').style.height = "100vh" ;
+        document.getElementById('app').style.color = "ghostwhite";
       },
     }
   }
@@ -99,6 +99,7 @@
     font-weight: 400;
     background-size: cover;
     padding-bottom: 60px;
+    font-weight: 200;
   }
 
   .app-header {
@@ -121,6 +122,10 @@
     text-align: start;
     font-size: 72px;
     position: relative;
+  }
+
+  .main-title:hover {
+    cursor: pointer;
   }
 
   /* Small devices (portrait tablets and large phones, 600px and up) */

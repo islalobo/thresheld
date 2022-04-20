@@ -37,7 +37,11 @@
   
   document.getElementById('app').style.background  = `url('https://${bucket}.s3.amazonaws.com/public/pinkwater.gif')`;
   document.getElementById('app').style.backgroundSize  = "cover";
+  // window.navigator.userAgentData.mobile
+  //   ? document.getElementById('app').style.height = "auto"
+  //   : document.getElementById('app').style.height = "100vh";
   document.getElementById('app').style.height = "auto";
+  document.getElementById('app').style.color = "ghostwhite";
 
   export default {
     name: 'AboutComponent',
