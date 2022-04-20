@@ -1,7 +1,9 @@
 <template>
   <div class="explore">
     <div class="play" @click="toggleAudio">
-      <div :text="text" class="controls">{{ text }}</div>
+      <div :text="text" class="controls">
+        <strong>{{ text }}</strong>
+      </div>
     </div>
 
     <div class="audio-item">
@@ -159,7 +161,7 @@
   if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator?.userAgent) ) {
     document.getElementById('app').style.height = "auto"
   } else {
-    document.getElementById('app').style.height = "100vh" ;
+    document.getElementById('app').style.height = "auto"
   }
 
   export default {
@@ -176,26 +178,26 @@
         },
         audio: {
           // track titles
-          1: {
-            id: 'body',
-            title: 'Body',
-            description: 'seaweed on rocks / corporal rhythm / forms in motion / gesturing into belonging / seal sounds / heartbeat and breath / “Before she goes underwater, the harbour seal will slow her heart.  Yes.  From 120 beats per minute to three or four heartbeats. Per minute. But first she exhales.  When she is underwater, the oxygen she needs is the oxygen she has.  Her blood breathes for her through her muscles as she descends as deep as 1,500 feet.  Deep enough for what she needs to do.  She slows her heart and listens, reaches, knows.  What if you could hear the world between your heartbeats? Slow down enough to deepen into trust?” from Undrowned: Black Feminist Lessons from Marine Mammals by Alexis Pauline Gumbs. (p.142)',
-          },
-          2: {
-            id: 'thrum',
-            title: 'Thrum',
-            description: 'mercurial / throbbing / analog bass pedals / N violin drone / electric guitar / ocean noise / water traffic / presence in fluidity / shapeshifting',
-          },
           3 : {
             id: 'field',
             title: 'Field',
-            description: 'sounds of transitional seasons / queer times & spaces / fall sleet on dried knotweed / intertidal zones / underwater recordings from seal sites / pulse and shift of tide / movement / liminal / cyclical',
+            description: 'oceanic, pulse and shift of tide, field recordings from transitional seasons, queer times & spaces, intertidal zones, fall sleet on dried knotweed, underwater hydrophone recordings from seal sites, movement',
           },
           4: {
             id: 'song',
             title:  'Song',
-            description: 'voice offerings / adaptations of N’s songs for the seals & selkies / devotional / odes to lineage / queer & trans ancestors / gay seals / echos / relationships through time / familial / care / reverberant offerings / reciprocity / settling in uncertainty / thresholding',
+            description: 'voice offerings, N’s songs for the seals & selkies, devotional, chorus of loved ones,  ode to gay seals, queer & trans ancestors, relationships through time, familial echos, reverberant hum, settling in uncertainty, thresholding',
           },
+          1: {
+            id: 'body',
+            title: 'Body',
+            description: 'seaweed on rocks, corporal rhythm, fog horns/bells, forms in motion, wayfinding, heartbeat and breath: “Before she goes underwater, the harbour seal will slow her heart.  Yes.  From 120 beats per minute to three or four heartbeats. Per minute. But first she exhales.  When she is underwater, the oxygen she needs is the oxygen she has.  Her blood breathes for her through her muscles as she descends as deep as 1,500 feet.  Deep enough for what she needs to do.  She slows her heart and listens, reaches, knows.  What if you could hear the world between your heartbeats? Slow down enough to deepen into trust?” from Undrowned: Black Feminist Lessons from Marine Mammals by Alexis Pauline Gumbs (p.142)',
+          },
+          2: {
+            id: 'thrum',
+            title: 'Thrum',
+            description: 'deep, mercurial, analog bass pedals, N’s violin drone, processed electric guitar,  throbbing, ocean noise, water traffic, sustained, presence in fluidity, shapeshifting',
+          }
         },
         // input ids
         body: 'body-volume',
@@ -230,6 +232,10 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+  .controls {
+    font-size: 0.875em;
+  }
+
   .controls:hover {
     cursor: pointer;
   }
@@ -246,6 +252,10 @@
     .explore {
       margin: auto 250px;
     }
+  }
+
+  .audio-item {
+    min-height: 136px;
   }
 
   .audio {
@@ -304,11 +314,11 @@
     -webkit-appearance: none;
     width: 15px;
     height: 50px;
-    background: #BFFFF0;
+    background: #F3C5C5;
     cursor: pointer;
-    border-left: 2px solid #BFFFF0;
+    border-left: 2px solid #F3C5C5;
     border-right: 2px solid #212529;
-    box-shadow: -407px 0 0 400px #BFFFF0;
+    box-shadow: -407px 0 0 400px #F3C5C5;
   }
 
   .description {
@@ -357,6 +367,7 @@
     cursor: pointer;
     position: relative;
     padding-left: calc(1.75rem + .75rem + .75rem);
+    color: ghostwhite;
   }
 
   summary:before {

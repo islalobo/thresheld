@@ -1,5 +1,5 @@
 <template>
-  <div class="paragraph">
+  <div class="image-container">
     <img
       :src="`https://${bucket}.s3.amazonaws.com/public/still.jpeg`"
       alt="Photo of parent and child viewed from behind standing on rocks at the ocean's edge. They are holding hands and looking off to the peach-coloured sunrise, with a circular apparition of seals in the distance."
@@ -66,7 +66,10 @@
     width: 100%;
   }
 
-  nav a {
-    color: black !important;
+  .paragraph {
+    background: whitesmoke;
+    padding: 16px;
+    position: relative;
+    top: 16px;
   }
 </style>

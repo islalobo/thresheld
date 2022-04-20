@@ -29,34 +29,33 @@
     a few possibilities:
 
     <ul>
-      <li>The People of the Sea, by David Thompson</li>
-      <li>Bluiríní Béaloidis: National Folklore Collection Podcast, University College Dublin</li>
-      <li>Undrowned: Black Feminist Lessons from Marine Mammals by Alexis Pauline Gumbs</li>
-      <li>Biological Exuberance: Animal Homosexuality and Natural Diversity, Bruce Bagemihl</li>
-      <li>“Homing: Returning to Oneself/Sealskin, Soulskin” in Women who Run with the Wolves, by Clarissa Pinkola Estés </li>
-      <li>Queer Ecologies; Sex, Nature, Politics, Desire,  edited by Catriona Mortimer-Sandilands, Bruce Erickson</li>
+      <li><a href="https://books.google.ca/books/about/The_People_of_the_Sea.html?id=wkW1AAAAIAAJ&redir_esc=y" target="_blank" class="link">The People of the Sea</a>, by David Thompson</li>
+      <li><a href="https://soundcloud.com/folklore_podcast" target="_blank" class="link">Bluiríní Béaloidis: National Folklore Collection Podcast</a>, University College Dublin</li>
+      <li><a href="https://www.akpress.org/undrowned.html" target="_blank" class="link">Undrowned: Black Feminist Lessons from Marine Mammals</a> by <a href="https://www.alexispauline.com/" target="_blank" class="link">Alexis Pauline Gumbs</a></li>
+      <li><a href="https://us.macmillan.com/books/9780312253776/biologicalexuberance" target="_blank" class="link">Biological Exuberance: Animal Homosexuality and Natural Diversity</a>, Bruce Bagemihl</li>
+      <li>“Homing: Returning to Oneself/Sealskin, Soulskin” in <a href="https://www.clarissapinkolaestes.com/women_who_run_with_the_wolves__myths_and_stories_of_the_wild_woman_archetype_101250.htm" target="_blank" class="link">Women who Run with the Wolves</a>, by Clarissa Pinkola Estés </li>
+      <li><a href="https://iupress.org/9780253222039/queer-ecologies/" target="_blank" class="link">Queer Ecologies; Sex, Nature, Politics, Desire</a>,  edited by Catriona Mortimer-Sandilands, Bruce Erickson</li>
     </ul>
   </div>
 
   <div class="paragraph">
-    The films The Song of the Sea and The Secret of Roan Inish were fun to watch with kiddos & The Girl From the Sea is a sweet graphic novel by Molly Knox Ostertag featuring a selkie character and young queer love.
+    The films <a href="https://www.imdb.com/title/tt1865505/" target="_blank" class="link">The Song of the Sea</a>
+    and <a href="https://www.imdb.com/title/tt0111112/" target="_blank" class="link">The Secret of Roan Inish</a> were fun to watch with kiddos &
+    <a href="https://www.goodreads.com/en/book/show/54776523-the-girl-from-the-sea" target="_blank" class="link">The Girl From the
+    Sea</a> is a sweet graphic novel by Molly Knox Ostertag featuring a selkie character and young queer love.
   </div>
 
   <div class="paragraph">
-    Many thanks to the Center for Art Tapes’ Media Arts Scholarship and the wonderful crew of staff, educators, mentors and fellow artists at CFAT for helping to facilitate this project. Jesse Mitchell, Tori Flemming, Seamus Gallagher, Mable Wheeler, Joel Waddel, Kate Walchuk, Riss Sean Cruz, and Lou Sheppard–you are all stars. Thanks Alanna Macnevin for the website wizardry and support. Big smooches to N for diving in, hiking, recording, and making noises together.
+    Many thanks to the Center for Art Tapes’ Media Arts Scholarship and the wonderful crew of staff,
+    educators, mentors and fellow artists at CFAT for helping to facilitate this project. Jesse Mitchell, Tori Flemming,
+    Seamus Gallagher, Mable Wheeler, Joel Waddel, Kate Walchuk, Riss Sean Cruz, and Lou Sheppard–you are all stars. Thanks
+    Alanna Macnevin for the website wizardry and support. Big smooches to N for diving in, hiking, recording, and making noises together.
   </div>
 </template>
 
 <script>
   document.getElementById('app').style.background  = '#F3C5C5';
-  document.getElementById('app').style.backgroundSize  = "cover";  
-  document.getElementById('app').style.color = "black";
-
-  document.getElementById('nav-info').style.color = 'black';
-  document.getElementById('nav-watch').style.color = 'black';
-  document.getElementById('nav-explore').style.color = 'black';
-  document.getElementById('nav-about').style.color = 'black';
-  document.getElementById('nav-further').style.color = 'black';
+  document.getElementById('app').style.backgroundSize  = "cover";
 
   if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator?.userAgent) ) {
     document.getElementById('app').style.height = "auto" ;

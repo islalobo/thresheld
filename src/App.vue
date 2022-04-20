@@ -73,7 +73,7 @@
         if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator?.userAgent) ) {
           document.getElementById('app').style.height = "auto"
         } else {
-          document.getElementById('app').style.height = "100vh" ;
+          document.getElementById('app').style.height = "auto" ;
         }
       },
       changeBackgroundExplore() {
@@ -83,7 +83,7 @@
         if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator?.userAgent) ) {
           document.getElementById('app').style.height = "auto"
         } else {
-          document.getElementById('app').style.height = "100vh" ;
+          document.getElementById('app').style.height = "auto" ;
         }
       },
       changeBackgroundAbout() {
@@ -168,11 +168,23 @@
     font-weight: bold;
     color: black;
     text-decoration: none;
+    font-size: 0.875em;
   }
 
-  nav a.router-link-exact-active, .link {
+  nav a.router-link-exact-active {
     background: chartreuse;
     color: black;
+    text-decoration: none;
+  }
+
+  .link {
+    background: none;
+    text-decoration: underline;
+    color: black;
+  }
+
+  .link:hover {
+    background: chartreuse;
     text-decoration: none;
   }
 
@@ -184,7 +196,8 @@
     text-align: center;
   }
 
-  .paragraph {
+  .paragraph,
+  .image-container {
     text-align: justify;
     margin: auto 40;
     padding-top: 20px;
@@ -200,15 +213,15 @@
 
   /* Extra large devices (large laptops and desktops, 1200px and up) */
   @media only screen and (min-width: 1200px) {
-    .paragraph {
+    .paragraph,
+    .image-container {
       margin: auto 250px;
     }
   }
 
   .chartreuse {
-    color: chartreuse;
-    font-weight: bold;
-    font-size: 18px;
+    font-weight: 500;
     text-align: center;
+    background: chartreuse;
   }
 </style>
