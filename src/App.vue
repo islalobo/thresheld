@@ -1,38 +1,45 @@
 <template>
   <div class="app-header">
-    <div
-      class="main-title"
-      @click="goHome"
-    >
-      thresheld
+    <div class="main-title">
+      <div class="title" @click="goHome">thresheld</div>
     </div>
 
-    <div class="nav-area">
+    <div>
       <nav>
         <router-link
+          id="nav-info"
           to="/"
           @click="changeBackgroundInfo"
         >
-          info
+          home
         </router-link> |
         <router-link
+          id="nav-watch"
           to="/watch"
           @click="changeBackgroundWatch"
         >
           watch
         </router-link> |
         <router-link
-          :id="explore"
+          id="nav-explore"
           to="/explore"
           @click="changeBackgroundExplore"
         >
           explore
         </router-link> |
         <router-link
+          id="nav-about"
           to="/about"
           @click="changeBackgroundAbout"
         >
           about
+        </router-link> |
+        <router-link
+          id="nav-further"
+          to="/further"
+          @click="changeBackgroundFurther"
+        >
+          further
         </router-link>
       </nav>
     </div>
@@ -50,9 +57,8 @@
         window.location = '/';
       },
       changeBackgroundInfo() {
-        document.getElementById('app').style.background  = `url('https://${bucket}.s3.amazonaws.com/public/pinkwater.gif')`;
+        document.getElementById('app').style.background  = `url('https://${bucket}.s3.amazonaws.com/public/landscape_ocean.jpg')`;
         document.getElementById('app').style.backgroundSize  = "cover";
-        document.getElementById('app').style.color = "ghostwhite";
 
         if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator?.userAgent) ) {
           document.getElementById('app').style.height = "auto"
@@ -61,9 +67,8 @@
         }
       },
       changeBackgroundWatch() {
-        document.getElementById('app').style.background  = "black";
+        document.getElementById('app').style.background  = '#F3C5C5';
         document.getElementById('app').style.backgroundSize  = "cover";
-        document.getElementById('app').style.color = "ghostwhite";
 
         if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator?.userAgent) ) {
           document.getElementById('app').style.height = "auto"
@@ -74,7 +79,6 @@
       changeBackgroundExplore() {
         document.getElementById('app').style.background  = `url('https://${bucket}.s3.amazonaws.com/public/swirlclip2.gif')`;
         document.getElementById('app').style.backgroundSize  = "cover";
-        document.getElementById('app').style.color = "black";
 
         if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator?.userAgent) ) {
           document.getElementById('app').style.height = "auto"
@@ -83,9 +87,8 @@
         }
       },
       changeBackgroundAbout() {
-        document.getElementById('app').style.background  = `url('https://${bucket}.s3.amazonaws.com/public/lavenderwater.gif')`;
+        document.getElementById('app').style.background  = `url('https://${bucket}.s3.amazonaws.com/public/portrait_ocean_scaled.jpg')`;
         document.getElementById('app').style.backgroundSize  = "cover";
-        document.getElementById('app').style.color = "ghostwhite";
 
 
         if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator?.userAgent) ) {
@@ -94,6 +97,16 @@
           document.getElementById('app').style.height = "auto" ;
         }
       },
+      changeBackgroundFurther() {
+        document.getElementById('app').style.background  = '#F3C5C5';
+        document.getElementById('app').style.backgroundSize  = "cover";
+
+
+        if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator?.userAgent) ) {
+          document.getElementById('app').style.height = "auto" ;
+        } else {
+          document.getElementById('app').style.height = "auto" ;
+        }}
     }
   }
 </script>
@@ -107,7 +120,7 @@
   #app {
     font-family: "Montserrat", sans-serif;
     text-align: justify;
-    color: ghostwhite;
+    color: black;
     font-size: 16px;
     font-weight: 400;
     background-size: cover;
@@ -118,9 +131,12 @@
   .app-header {
     display: flex;
     flex-wrap: wrap;
-    padding: 20px;
+    padding: 16px;
     height: 150px;
     align-items: center;
+    background: #F3c5c5;
+    margin-bottom: 32px;
+    opacity: 0.678;
   }
 
   .nav-area {
@@ -150,11 +166,11 @@
 
   nav a {
     font-weight: bold;
-    color: ghostwhite;
+    color: black;
     text-decoration: none;
   }
 
-  nav a.router-link-exact-active {
+  nav a.router-link-exact-active, .link {
     background: chartreuse;
     color: black;
     text-decoration: none;
@@ -192,7 +208,7 @@
   .chartreuse {
     color: chartreuse;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 18px;
     text-align: center;
   }
 </style>

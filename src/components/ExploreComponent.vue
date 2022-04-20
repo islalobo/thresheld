@@ -155,7 +155,6 @@
 
   document.getElementById('app').style.background  = `url('https://${bucket}.s3.amazonaws.com/public/swirlclip2.gif')`;
   document.getElementById('app').style.backgroundSize  = "cover";
-  document.getElementById('app').style.color = "black";
 
   if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator?.userAgent) ) {
     document.getElementById('app').style.height = "auto"
