@@ -155,10 +155,13 @@
 
   document.getElementById('app').style.background  = `url('https://${bucket}.s3.amazonaws.com/public/swirlclip2.gif')`;
   document.getElementById('app').style.backgroundSize  = "cover";
-  window.navigator.userAgentData.mobile
-    ? document.getElementById('app').style.height = "auto"
-    : document.getElementById('app').style.height = "100vh" ;
   document.getElementById('app').style.color = "black";
+
+  if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator?.userAgent) ) {
+    document.getElementById('app').style.height = "auto"
+  } else {
+    document.getElementById('app').style.height = "100vh" ;
+  }
 
   export default {
     name: 'ExploreComponent',
