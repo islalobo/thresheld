@@ -50,33 +50,33 @@
       changeBackgroundInfo() {
         document.getElementById('app').style.background  = "url('../pinkwater.gif')";
         document.getElementById('app').style.backgroundSize  = "cover";
-        navigator.userAgentData.mobile
-          ? document.getElementById('app').style.height = "auto"
-          : document.getElementById('app').style.height = "100vh" ;
+        // navigator.userAgentData.mobile
+        //   ? document.getElementById('app').style.height = "auto"
+        //   : document.getElementById('app').style.height = "100vh" ;
         // document.getElementById('app').style.color = "ghostwhite";
       },
       changeBackgroundWatch() {
         document.getElementById('app').style.background  = "black";
         document.getElementById('app').style.backgroundSize  = "cover";
-        navigator.userAgentData.mobile
-          ? document.getElementById('app').style.height = "auto"
-          : document.getElementById('app').style.height = "100vh" ;
+        // navigator.userAgentData.mobile
+        //   ? document.getElementById('app').style.height = "auto"
+        //   : document.getElementById('app').style.height = "100vh" ;
         // document.getElementById('app').style.color = "ghostwhite";
       },
       changeBackgroundExplore() {
         document.getElementById('app').style.background  = "url('../swirlclip2.gif')";
         document.getElementById('app').style.backgroundSize  = "cover";
-        navigator.userAgentData.mobile
-          ? document.getElementById('app').style.height = "auto"
-          : document.getElementById('app').style.height = "100vh" ;
+        // navigator.userAgentData.mobile
+        //   ? document.getElementById('app').style.height = "auto"
+        //   : document.getElementById('app').style.height = "100vh" ;
         // document.getElementById('app').style.color = "black";
       },
       changeBackgroundAbout() {
         document.getElementById('app').style.background  = "url('../pinkwater.gif')";
         document.getElementById('app').style.backgroundSize  = "cover";
-        navigator.userAgentData.mobile
-          ? document.getElementById('app').style.height = "auto"
-          : document.getElementById('app').style.height = "100vh" ;
+        // navigator.userAgentData.mobile
+        //   ? document.getElementById('app').style.height = "auto"
+        //   : document.getElementById('app').style.height = "100vh" ;
         // document.getElementById('app').style.color = "ghostwhite";
       },
     }

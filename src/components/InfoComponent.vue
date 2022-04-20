@@ -27,9 +27,9 @@
 <script>
   document.getElementById('app').style.background  = "url('../pinkwater.gif')";
   document.getElementById('app').style.backgroundSize  = "cover";
-  navigator.userAgentData.mobile
-    ? document.getElementById('app').style.height = "auto"
-    : document.getElementById('app').style.height = "100vh" ;
+  // navigator.userAgentData.mobile
+  //   ? document.getElementById('app').style.height = "auto"
+  //   : document.getElementById('app').style.height = "100vh" ;
   document.getElementById('app').style.color = "ghostwhite";
 
   export default {
