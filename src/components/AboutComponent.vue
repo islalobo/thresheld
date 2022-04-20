@@ -64,6 +64,7 @@
 <style scoped>
   .about-image {
     width: 100%;
+    margin-bottom: 32px;
   }
 
   .paragraph {
