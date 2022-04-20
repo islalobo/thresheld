@@ -1,11 +1,19 @@
 <template>
-  <video id="sampleMovie" width="640" height="360" preload controls>
-    <source :src="`https://${bucket}.s3.amazonaws.com/public/final.m4v`" />
-    <!-- <source :src="`https://${bucket}.s3.amazonaws.com/public/final.mp4`" /> -->
-    <source :src="`https://${bucket}.s3.amazonaws.com/public/final.ogv`" />
-    <source :src="`https://${bucket}.s3.amazonaws.com/public/final.wemb`" />
-    Your browser does not support the video tag.
-  </video>
+  <div class="paragraph">
+    <div class="chartreuse">
+      * Headphones or speakers are reccommended to explore this project *
+    </div>
+  </div>
+
+  <div class="paragraph">
+    <video id="sampleMovie" width="640" height="360" preload controls>
+      <source :src="`https://${bucket}.s3.amazonaws.com/public/final.m4v`" />
+      <!-- <source :src="`https://${bucket}.s3.amazonaws.com/public/final.mp4`" /> -->
+      <source :src="`https://${bucket}.s3.amazonaws.com/public/final.ogv`" />
+      <source :src="`https://${bucket}.s3.amazonaws.com/public/final.wemb`" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
 
   <div class="paragraph">
     <i>Thresheld</i> is a hybrid sound/video project that synthesizes personal experience, the study of seals and
@@ -71,7 +79,7 @@
     /* position: fixed ; */
     /* bottom: 0; */
     /* left: 0; */
-    width: 75%;
+    width: 100%;
     height: 60%;
   }
 </style>

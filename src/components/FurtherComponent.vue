@@ -15,12 +15,13 @@
     Gratitude for the queer ancestors and trancestors that have towed the line, the plants and animals that are effortlessly queer by nature and the stories and folklore through which this is woven.
   </div>
 
-  <div class="paragraph">
+  <div class="image-content">
     <img
       :src="`https://${bucket}.s3.amazonaws.com/public/seals-transparent.png`"
       alt="Photo of parent and child viewed from behind standing on rocks at the ocean's edge. They are holding hands and looking off to the peach-coloured sunrise, with a circular apparition of seals in the distance."
       class="further-image"
     />
+    <div class="caption">Image is from Bruce Bagemihl’s Biological Exhuberance</div>
   </div>
 
   <div class="paragraph">
@@ -79,7 +80,17 @@
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-  .further-image {
+  .image-content {
     width: 100%;
+    text-align: center;
+  }
+
+  .further-image {
+    width: 350px;
+  }
+
+  .caption {
+    font-size: 0.8em;
+    font-style: italic;
   }
 </style>

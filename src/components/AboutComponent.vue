@@ -1,17 +1,17 @@
 <template>
+  <div class="paragraph">
+    This work was created in relationship with the water, the land and creatures of Mi’kma’ki, the traditional,
+    unceded and unsurrendered territory of the Mi’kmaq. We live here in gratitude and endeavor, as treaty people,
+    to continue the work of cultivating respectful relationships with all people as outlined in the Peace and
+    Friendship Treaties.
+  </div>
+
   <div class="image-container">
     <img
       :src="`https://${bucket}.s3.amazonaws.com/public/still.jpeg`"
       alt="Photo of parent and child viewed from behind standing on rocks at the ocean's edge. They are holding hands and looking off to the peach-coloured sunrise, with a circular apparition of seals in the distance."
       class="about-image"
     />
-  </div>
-
-  <div class="paragraph">
-    This work was created in relationship with the water, the land and creatures of Mi’kma’ki, the traditional,
-    unceded and unsurrendered territory of the Mi’kmaq. We live here in gratitude and endeavor, as treaty people,
-    to continue the work of cultivating respectful relationships with all people as outlined in the Peace and
-    Friendship Treaties.
   </div>
 
   <div class="paragraph">
@@ -69,7 +69,7 @@
   .paragraph {
     background: whitesmoke;
     padding: 16px;
-    position: relative;
-    top: 16px;
+    margin-top: 16px;
+    margin-bottom: 16px;
   }
 </style>

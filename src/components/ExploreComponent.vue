@@ -6,6 +6,12 @@
       </div>
     </div>
 
+    <div class="paragraph">
+      <div class="chartreuse">
+       * Headphones or speakers are reccommended to explore this project *
+      </div>
+    </div>
+
     <div class="audio-item">
       <audio
         id="body-audio"
@@ -368,6 +374,7 @@
     position: relative;
     padding-left: calc(1.75rem + .75rem + .75rem);
     color: ghostwhite;
+    text-transform: uppercase;
   }
 
   summary:before {
@@ -388,5 +395,10 @@
 
   details[open] summary:before {
     content: "↑";
+  }
+
+  .chartreuse {
+    background: #F3C5C5;
+    opacity: 0.678;
   }
 </style>

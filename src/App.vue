@@ -201,7 +201,6 @@
     text-align: justify;
     margin: auto 40;
     padding-top: 20px;
-    position: relative;
   }
 
   /* Extra small devices (phones, 600px and down) */
