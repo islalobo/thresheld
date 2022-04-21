@@ -413,5 +413,6 @@
     padding: 16px;
     margin: 0px;
     margin-top: 32px;
+    text-align: center;
   }
 </style>
