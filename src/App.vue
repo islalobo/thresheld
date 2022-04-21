@@ -73,7 +73,7 @@
         if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator?.userAgent) ) {
           document.getElementById('app').style.height = "auto"
         } else {
-          document.getElementById('app').style.height = "auto" ;
+          document.getElementById('app').style.height = "100vh" ;
         }
       },
       changeBackgroundExplore() {
