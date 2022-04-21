@@ -6,14 +6,11 @@
       </div>
     </div>
 
-    <div class="paragraph-chartreuse">
+    <div class="paragraph">
+      Explore using the faders to shape the soundscape. Click each title to expand for a description of of the track and it's inspiration.
       <div class="chartreuse">
        * Headphones or speakers are recommended to explore this project *
       </div>
-    </div>
-
-    <div class="paragraph">
-      Explore using the faders to shape the soundscape.
     </div>
 
     <div class="audio-item">
@@ -165,9 +162,9 @@
 <script>
   const bucket = process.env.VUE_APP_BUCKETEER_BUCKET_NAME;
 
-  
   document.getElementById('app').style.backgroundSize  = "cover";
-
+  document.getElementById('app').style.height = "auto"
+  
   if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator?.userAgent) ) {
     document.getElementById('app').style.background  = `url('https://${bucket}.s3.amazonaws.com/public/dark_waterink_still_1.22.1_scaled.jpg')`;
     document.getElementById('app').style.backgroundSize  = "cover";
@@ -343,12 +340,10 @@
   }
 
   details div {
-    border-left: 2px solid #000;
-    border-right: 2px solid #000;
-    border-bottom: 2px solid #000;
-    padding: 1.5em;
+    padding: 16px;
     color: black;
-    background-color: #eee;
+    background-color: whitesmoke;
+    width: 90%;
   }
 
   details div > * + * {
@@ -398,14 +393,7 @@
   }
 
   .chartreuse {
-    background: #F3C5C5;
-    opacity: 0.678;
-  }
-
-  .paragraph-chartreuse {
-    margin: auto;
-    padding-top: 0px;
-    margin-top: 32px;
+    margin-top: 16px;
   }
   
   .paragraph {
@@ -413,6 +401,5 @@
     padding: 16px;
     margin: 0px;
     margin-top: 32px;
-    text-align: center;
   }
 </style>

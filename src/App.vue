@@ -77,7 +77,7 @@
         }
       },
       changeBackgroundExplore() {
-        document.getElementById('app').style.background  = `url('https://${bucket}.s3.amazonaws.com/public/swirlclip2.gif')`;
+        // document.getElementById('app').style.background  = `url('https://${bucket}.s3.amazonaws.com/public/swirlclip2.gif')`;
         document.getElementById('app').style.backgroundSize  = "cover";
 
         if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator?.userAgent) ) {
@@ -204,13 +204,6 @@
     margin-left: 40px;
   }
 
-  /* Extra small devices (phones, 600px and down) */
-  /* @media only screen and (max-width: 600px) {
-    .paragraph {
-      margin: auto 150px;
-    }
-  } */
-
   /* Extra large devices (large laptops and desktops, 1200px and up) */
   @media only screen and (min-width: 1200px) {
     .paragraph,
@@ -224,5 +217,6 @@
     font-weight: 500;
     text-align: center;
     background: chartreuse;
+    opacity: 0.8;
   }
 </style>
