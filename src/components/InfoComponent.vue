@@ -25,7 +25,7 @@
 
     <div class="paragraph">
       <div class="chartreuse">
-        * Headphones or speakers are reccommended to explore this project *
+        * Headphones or speakers are recommended to explore this project *
       </div>
     </div>
   </div>
