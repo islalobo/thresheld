@@ -6,10 +6,14 @@
       </div>
     </div>
 
-    <div class="paragraph chartreuse">
+    <div class="paragraph-chartreuse">
       <div class="chartreuse">
        * Headphones or speakers are recommended to explore this project *
       </div>
+    </div>
+
+    <div class="paragraph">
+      Explore using the faders to shape the soundscape.
     </div>
 
     <div class="audio-item">
@@ -304,11 +308,6 @@
   }
 
   .volume-toggle {
-    position: relative;
-    top: 15px;
-  }
-
-  .volume-toggle {
     width: 100%;
     height: 40px;
     -webkit-appearance: none;
@@ -320,12 +319,12 @@
 
   .volume-toggle::-webkit-slider-thumb {
     -webkit-appearance: none;
-    width: 15px;
+    width: 8px;
     height: 50px;
-    background: #F3C5C5;
+    background: #EE809A;
     cursor: pointer;
-    border-left: 2px solid #F3C5C5;
-    border-right: 2px solid #212529;
+    border-left: 1px solid #212529;
+    border-right: 1px solid #212529;
     box-shadow: -407px 0 0 400px #F3C5C5;
   }
 
@@ -341,7 +340,6 @@
   div > details {
     position: relative;
     left: 16px;
-    top: 16px;
   }
 
   details div {
@@ -404,9 +402,16 @@
     opacity: 0.678;
   }
 
-  .paragraph.chartreuse {
+  .paragraph-chartreuse {
     margin: auto;
     padding-top: 0px;
+    margin-top: 32px;
+  }
+  
+  .paragraph {
+    background: whitesmoke;
+    padding: 16px;
+    margin: 0px;
     margin-top: 32px;
   }
 </style>
