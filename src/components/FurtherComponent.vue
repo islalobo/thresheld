@@ -1,18 +1,30 @@
 <template>
   <div class="paragraph">
-    As white settlers living on unceded indegenous land and disconnected from culturally rooted ancestral practices of our lineages, creative engagements with lineage-based work and practice are in service of attempting to account for legacies of harm and to heal from the toxic inheritances that keep us from cultivating the respectful and reciprocal relationships with the earth and people we dream of.
+    As white settlers living on unceded indegenous land and disconnected from culturally rooted
+    ancestral practices of our lineages, creative engagements with lineage-based work and practice
+    are in service of attempting to account for legacies of harm and to heal from the toxic inheritances
+    that keep us from cultivating the respectful and reciprocal relationships with the earth and
+    people we dream of.
   </div>
 
   <div class="paragraph">
-     This work experiments with creatively connecting with and integrating learnings from ancestral folklore and (queer)ecology in service navigating our own lives and relationships with more wholeness and dignity.
+     This work experiments with creatively connecting with and integrating learnings from
+     ancestral folklore and (queer)ecology in service navigating our own lives and relationships
+     with more wholeness and dignity.
   </div>
 
   <div class="paragraph">
-   Seal and selkie lore reflects an ancestral worldview that was animist and often involves themes of reinhabiting parts of ourselves we’ve been cut off from to preserve our safety or belonging, relationships between the human and non-human world, hybridity/shapeshifting, and lessons around harm and accountability. There is wisdom nestled there that feels pertinent to the challenges of being true to oneself and the work of dismantling the systems of domination that keep us from healing and liberation.
+   Seal and selkie lore reflects an ancestral worldview that was animist and often involves
+   themes of reinhabiting parts of ourselves we’ve been cut off from to preserve our safety or
+   belonging, relationships between the human and non-human world, hybridity/shapeshifting, and
+   lessons around harm and accountability. There is wisdom nestled there that feels pertinent to
+   the challenges of being true to oneself and the work of dismantling the systems of domination
+   that keep us from collective healing and liberation.
   </div>
 
   <div class="paragraph">
-    Gratitude for the queer ancestors and trancestors that have towed the line, the plants and animals that are effortlessly queer by nature and the stories and folklore through which this is woven.
+    Gratitude for the queer ancestors and trancestors that have towed the line, the plants
+    and animals that are effortlessly queer by nature and the stories and folklore through which this is woven.
   </div>
 
   <div class="image-content">
