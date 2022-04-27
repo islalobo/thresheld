@@ -7,7 +7,7 @@
     </div>
 
     <div class="paragraph">
-      Explore using the faders to shape the soundscape. Click each title to expand for a description of of the track and it's inspiration.
+      Explore using the faders to shape the soundscape. Titles can be expanded for track info.
       <div class="chartreuse">
        * Headphones or speakers are recommended to explore this project *
       </div>
