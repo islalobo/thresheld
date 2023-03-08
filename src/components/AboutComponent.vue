@@ -8,7 +8,7 @@
 
   <div class="image-container">
     <img
-      src="@/assets/public/still.jpeg"
+      src="@/assets/gayseals.jpeg"
       alt="Photo of parent and child viewed from behind standing on rocks at the ocean's edge. They are holding hands and looking off to the peach-coloured sunrise, with a circular apparition of seals in the distance."
       class="about-image"
     />
