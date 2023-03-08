@@ -8,7 +8,7 @@
 
   <div class="image-container">
     <img
-      :src="`https://${bucket}.s3.amazonaws.com/public/still.jpeg`"
+      :src="`${bucket}/assets/still.jpeg`"
       alt="Photo of parent and child viewed from behind standing on rocks at the ocean's edge. They are holding hands and looking off to the peach-coloured sunrise, with a circular apparition of seals in the distance."
       class="about-image"
     />
@@ -51,7 +51,7 @@
     data() {
       return {
         // bucket name
-        bucket: process.env.VUE_APP_BUCKETEER_BUCKET_NAME,
+        bucket: process.env.BASE_URL,
       }
     },
     props: {
