@@ -1,4 +1,4 @@
-src/assets/*
+/assets/*
 /thresheld
 .DS_Store
 node_modules
