@@ -32,10 +32,8 @@
   </div>
 </template>
 
-<script>
-  const bucket = process.env.VUE_APP_BUCKETEER_BUCKET_NAME;
-  
-  document.getElementById('app').style.background  = `url('https://${bucket}.s3.amazonaws.com/public/portrait_ocean_scaled.jpg')`;
+<script>  
+  document.getElementById('app').style.background  = `url('https://thresheld.s3.amazonaws.com/gayseals.jpeg')`;
   document.getElementById('app').style.backgroundSize  = "cover";
   document.getElementById('app').style.height = "auto";
   
