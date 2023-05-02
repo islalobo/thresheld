@@ -8,7 +8,7 @@
 
   <div class="image-container">
     <img
-      src="@/assets/gayseals.jpeg"
+      src="https://thresheld.s3.amazonaws.com/gayseals.jpeg"
       alt="Photo of parent and child viewed from behind standing on rocks at the ocean's edge. They are holding hands and looking off to the peach-coloured sunrise, with a circular apparition of seals in the distance."
       class="about-image"
     />
@@ -33,7 +33,7 @@
 </template>
 
 <script>  
-  document.getElementById('app').style.background  = `url('https://thresheld.s3.amazonaws.com/gayseals.jpeg')`;
+  document.getElementById('app').style.background  = `url('https://thresheld.s3.amazonaws.com/portrait_ocean_scaled.jpg')`;
   document.getElementById('app').style.backgroundSize  = "cover";
   document.getElementById('app').style.height = "auto";
   
