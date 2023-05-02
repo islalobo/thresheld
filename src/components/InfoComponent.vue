@@ -32,9 +32,7 @@
 </template>
 
 <script>
-  const bucket = process.env.VUE_APP_BUCKETEER_BUCKET_NAME;
-
-  document.getElementById('app').style.background  = `url('https://${bucket}.s3.amazonaws.com/public/landscape_ocean_scaled.jpg')`;
+  document.getElementById('app').style.background  = `url('https://thresheld.s3.amazonaws.com/landscape_ocean_scaled.jpg')`;
   document.getElementById('app').style.backgroundSize  = "cover";
 
   if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator?.userAgent) ) {
