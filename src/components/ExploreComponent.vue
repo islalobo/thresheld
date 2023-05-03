@@ -22,7 +22,7 @@
         loop
       >
         <source
-          :src="`https://${bucket}.s3.amazonaws.com/public/body.wav`"
+          :src="`https://thresheld.s3.amazonaws.com/body.wav`"
           type="audio/mpeg"
         />
         Your browser does not support the audio element.
@@ -58,7 +58,7 @@
         loop
       >
         <source
-          :src="`https://${bucket}.s3.amazonaws.com/public/drone.wav`"
+          :src="`https://thresheld.s3.amazonaws.com/drone.wav`"
           type="audio/mpeg"
         />
         Your browser does not support the audio element.
@@ -94,7 +94,7 @@
         loop
       >
         <source
-          :src="`https://${bucket}.s3.amazonaws.com/public/field.wav`"
+          :src="`https://thresheld.s3.amazonaws.com/field.wav`"
           type="audio/mpeg"
         />
         Your browser does not support the audio element.
@@ -130,7 +130,7 @@
         loop
       >
         <source
-          :src="`https://${bucket}.s3.amazonaws.com/public/vox.wav`"
+          :src="`https://thresheld.s3.amazonaws.com/vox.wav`"
           type="audio/mpeg"
         />
         Your browser does not support the audio element.
@@ -166,10 +166,10 @@
   document.getElementById('app').style.height = "auto"
   
   if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator?.userAgent) ) {
-    document.getElementById('app').style.background  = `url('https://${bucket}.s3.amazonaws.com/public/dark_waterink_still_1.22.1_scaled.jpg')`;
+    document.getElementById('app').style.background  = `url('https://thresheld.s3.amazonaws.com/dark_waterink_still_1.22.1_scaled.jpg')`;
     document.getElementById('app').style.backgroundSize  = "cover";
   } else {
-    document.getElementById('app').style.background  = `url('https://${bucket}.s3.amazonaws.com/public/swirlclip2.gif')`;
+    document.getElementById('app').style.background  = `url('https://thresheld.s3.amazonaws.com/swirlclip2.gif')`;
     document.getElementById('app').style.backgroundSize  = "cover";
   }
 

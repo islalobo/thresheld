@@ -29,7 +29,7 @@
 
   <div class="image-content">
     <img
-      :src="`https://${bucket}.s3.amazonaws.com/public/seals-transparent.png`"
+      :src="`https://thresheld.s3.amazonaws.com/seals-transparent.png`"
       alt="Photo of parent and child viewed from behind standing on rocks at the ocean's edge. They are holding hands and looking off to the peach-coloured sunrise, with a circular apparition of seals in the distance."
       class="further-image"
     />
