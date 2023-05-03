@@ -160,8 +160,6 @@
 </template>
 
 <script>
-  const bucket = process.env.VUE_APP_BUCKETEER_BUCKET_NAME;
-
   document.getElementById('app').style.backgroundSize  = "cover";
   document.getElementById('app').style.height = "auto"
   
