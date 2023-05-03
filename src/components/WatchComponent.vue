@@ -7,10 +7,10 @@
 
   <div class="paragraph">
     <video id="sampleMovie" width="640" height="360" preload controls>
-      <source :src="`https://${bucket}.s3.amazonaws.com/public/final.m4v`" />
-      <source :src="`https://${bucket}.s3.amazonaws.com/public/final.mp4`" />
-      <source :src="`https://${bucket}.s3.amazonaws.com/public/final.ogv`" />
-      <source :src="`https://${bucket}.s3.amazonaws.com/public/final.wemb`" />
+      <source :src="`https://thresheld.s3.amazonaws.com/final.m4v`" />
+      <source :src="`https://thresheld.s3.amazonaws.com/final.mp4`" />
+      <source :src="`https://thresheld.s3.amazonaws.com/final.ogv`" />
+      <source :src="`https://thresheld.s3.amazonaws.com/final.wemb`" />
       Your browser does not support the video tag.
     </video>
   </div>
