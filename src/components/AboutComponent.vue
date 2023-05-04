@@ -33,7 +33,7 @@
 </template>
 
 <script>  
-  document.getElementById('app').style.background  = `url('https://thresheld.s3.amazonaws.com/portrait_ocean_scaled.jpg')`;
+  document.getElementById('app').style.background  = `url('https://thresheld.s3.amazonaws.com/still.jpeg')`;
   document.getElementById('app').style.backgroundSize  = "cover";
   document.getElementById('app').style.height = "auto";
   
